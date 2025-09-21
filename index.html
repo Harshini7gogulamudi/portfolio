@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Harshini Gogulamudi | Portfolio</title>
-  <style>
-    :root {<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Harshini Gogulamudi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2c3e50;
-      --secondary: #3498db;
-      --bg: #f7f9fc;
-      --text: #333;
+      --primary: #1e3a8a; /* dark blue */
+      --secondary: #3b82f6; /* light blue accent */
+      --bg: #f0f4f8;
+      --text: #1f2937; /* dark gray */
+      --card-bg: #ffffff;
+      --card-shadow: rgba(0,0,0,0.1);
+      --accent: #f59e0b; /* gold accent */
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: var(--bg);
       margin: 0;
       line-height: 1.6;
@@ -30,144 +31,137 @@
     header {
       background: var(--primary);
       color: #fff;
-      padding: 20px 0;
+      padding: 30px 20px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      font-weight: 700;
     }
 
     header p {
       font-size: 1.2rem;
       margin-top: 5px;
-      color: #ecf0f1;
+      color: #e0e7ff;
     }
 
     nav {
       background: var(--secondary);
-      padding: 10px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      gap: 20px;
+      font-weight: 500;
     }
 
     nav a {
       color: #fff;
-      margin: 0 15px;
       text-decoration: none;
-      font-weight: 500;
+      transition: color 0.2s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--accent);
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 30px;
+      padding: 40px 20px;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     h2 {
       color: var(--primary);
-      border-bottom: 2px solid var(--secondary);
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--secondary);
       padding-bottom: 5px;
+      margin-bottom: 20px;
     }
 
     ul li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-size: 1rem;
     }
 
-    footer {
-      background: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #ecf0f1;
-    }
-
-    /* Certifications */
-    .certs {
+    /* Cards */
+    .cards {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      justify-content: flex-start;
-      margin-top: 10px;
+      gap: 15px;
     }
 
-    .cert-card {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 8px;
-      width: 120px;
+    .card {
+      background: var(--card-bg);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px var(--card-shadow);
+      flex: 1 1 220px;
       text-align: center;
-      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .cert-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px var(--card-shadow);
     }
 
-    .cert-card img {
+    .card img {
       width: 80px;
-      height: auto;
-      margin-bottom: 5px;
+      height: 80px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 8px;
     }
 
-    .cert-card p {
+    .card p {
       margin: 0;
-      font-size: 0.85rem;
       font-weight: 500;
       color: var(--primary);
     }
 
-    /* Projects */
-    .project-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
+    /* Projects cards */
+    .project-card {
+      text-align: left;
+      flex: 1 1 280px;
+      padding: 15px;
+      border-left: 5px solid var(--secondary);
+      border-radius: 8px;
+      box-shadow: 0 3px 8px var(--card-shadow);
+      background: var(--card-bg);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .project-card {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-left: 5px solid var(--secondary);
-      padding: 15px;
-      flex: 1 1 250px;
-      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-      border-radius: 5px;
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px var(--card-shadow);
     }
 
     .project-card h3 {
       margin-top: 0;
       color: var(--primary);
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
-    .project-card p {
-      margin: 5px 0 10px 0;
-      font-size: 0.95rem;
-      color: #555;
+    .project-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
     }
 
     .project-card ul {
       padding-left: 20px;
+      margin-top: 5px;
     }
 
     .project-card ul li {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .project-card ul li a {
@@ -177,7 +171,34 @@
     }
 
     .project-card ul li a:hover {
+      color: var(--accent);
       text-decoration: underline;
+    }
+
+    /* Contact */
+    #contact a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    #contact a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .cards, .project-card {
+        flex: 1 1 100%;
+      }
     }
 
   </style>
@@ -201,7 +222,7 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I’m a Master’s student in IT (Graduating in December 2025) passionate about building scalable cloud platforms,
+        I’m a Master’s student in IT (May 2026) passionate about building scalable cloud platforms,
         automating deployments with DevOps tools, designing secure networks, and creating actionable insights
         with Power BI and Tableau.
       </p>
@@ -221,29 +242,26 @@
     <!-- Certifications -->
     <section id="certifications">
       <h2>Certifications</h2>
-      <div class="certs">
-        <div class="cert-card">
+      <div class="cards">
+        <div class="card">
           <a href="https://www.credly.com/badges/11af2e3d-872c-44e0-bd5f-7b736411a468/public_url" target="_blank">
             <img src="https://images.credly.com/badges/11af2e3d-872c-44e0-bd5f-7b736411a468/public_url.png" alt="AWS Cloud Practitioner" />
           </a>
           <p>AWS Cloud Practitioner</p>
         </div>
-
-        <div class="cert-card">
+        <div class="card">
           <a href="https://www.credly.com/badges/ee7a8d12-94f1-409d-b330-65db8b6febec/public_url" target="_blank">
             <img src="https://images.credly.com/badges/ee7a8d12-94f1-409d-b330-65db8b6febec/public_url.png" alt="AWS Solutions Architect" />
           </a>
           <p>AWS Solutions Architect – Associate</p>
         </div>
-
-        <div class="cert-card">
+        <div class="card">
           <a href="https://www.credly.com/badges/fb7a90a2-d4a7-455d-9ce3-ad3959daa769/linked_in_profile" target="_blank">
             <img src="https://images.credly.com/badges/fb7a90a2-d4a7-455d-9ce3-ad3959daa769/public_url.png" alt="AWS Generative AI" />
           </a>
           <p>AWS Generative AI</p>
         </div>
-
-        <div class="cert-card">
+        <div class="card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/CCNA_logo.png" alt="CCNA" />
           <p>CCNA (In Progress)</p>
         </div>
@@ -253,27 +271,25 @@
     <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project-cards">
-        <!-- Cloud Projects -->
+      <div class="cards">
         <div class="project-card">
+          <img src="https://via.placeholder.com/400x200.png?text=AWS+Labs" alt="AWS Labs">
           <h3>Cloud Projects</h3>
           <p>Hands-on AWS labs and mini-projects demonstrating cloud infrastructure, security, and automation.</p>
           <ul>
             <li><a href="https://github.com/Harshini7gogulamudi/aws-projects" target="_blank">AWS KMS & Labs</a></li>
           </ul>
         </div>
-
-        <!-- Networking Projects -->
         <div class="project-card">
+          <img src="https://via.placeholder.com/400x200.png?text=Networking+Labs" alt="Networking Labs">
           <h3>Networking Projects</h3>
           <p>CCNA-level lab configurations, subnetting, VLANs, NAT, ACLs, and troubleshooting notes.</p>
           <ul>
             <li><a href="https://github.com/Harshini7gogulamudi/network-labs" target="_blank">Network Labs & Diagrams</a></li>
           </ul>
         </div>
-
-        <!-- Terraform / IaC Projects -->
         <div class="project-card">
+          <img src="https://via.placeholder.com/400x200.png?text=Terraform" alt="Terraform">
           <h3>Terraform / IaC</h3>
           <p>Infrastructure as Code modules and best practices for AWS resources, including VPC, EC2, S3, and IAM.</p>
           <ul>
@@ -281,9 +297,8 @@
             <li><a href="https://github.com/Harshini7gogulamudi/terraform-projects" target="_blank">Advanced Terraform Projects</a></li>
           </ul>
         </div>
-
-        <!-- Kubernetes / DevOps Projects -->
         <div class="project-card">
+          <img src="https://via.placeholder.com/400x200.png?text=Kubernetes" alt="Kubernetes">
           <h3>Kubernetes / DevOps</h3>
           <p>Container orchestration labs, RBAC, network policies, CI/CD pipelines with GitHub Actions and Jenkins.</p>
           <ul>
@@ -291,9 +306,8 @@
             <li><a href="https://github.com/Harshini7gogulamudi/ci-cd-k8s" target="_blank">CI/CD on Kubernetes</a></li>
           </ul>
         </div>
-
-        <!-- Data Analytics Projects -->
         <div class="project-card">
+          <img src="https://via.placeholder.com/400x200.png?text=Data+Analytics" alt="Data Analytics">
           <h3>Data Analytics</h3>
           <p>Power BI dashboards, Tableau visualizations, SQL ETL scripts, and business insights projects.</p>
           <ul>
@@ -307,230 +321,8 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>
-        📧 harshini7gogulamudi@gmail.com <br>
+        📧 <a href="mailto:harshini7gogulamudi@gmail.com">harshini7gogulamudi@gmail.com</a> <br>
         💼 <a href="https://www.linkedin.com/in/harshini7gogulamudi" target="_blank">LinkedIn</a>
-      </p>
-    </section>
-  </div>
-
-  <footer>
-    © 2025 Harshini Gogulamudi • Built with 💻 & ☕
-  </footer>
-</body>
-</html>
-
-      --primary: #2c3e50;
-      --secondary: #3498db;
-      --bg: #f7f9fc;
-      --text: #333;
-    }
-
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: var(--bg);
-      margin: 0;
-      line-height: 1.6;
-      color: var(--text);
-    }
-
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 5px;
-      color: #ecf0f1;
-    }
-
-    nav {
-      background: var(--secondary);
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      color: var(--primary);
-      border-bottom: 2px solid var(--secondary);
-      padding-bottom: 5px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    footer {
-      background: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #ecf0f1;
-    }
-
-    .certs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .cert-card {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-left: 5px solid var(--secondary);
-      padding: 15px;
-      flex: 1 1 250px;
-      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-      border-radius: 5px;
-      text-align: center;
-    }
-
-    .cert-card h3 {
-      margin-top: 0;
-      color: var(--primary);
-      font-size: 1.1rem;
-    }
-
-    .cert-card p {
-      margin: 5px 0 10px 0;
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    .cert-card img {
-      width: 150px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Harshini Gogulamudi</h1>
-    <p>Cloud · DevOps · Networking · Data Analytics</p>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I’m a Master’s student in IT (May 2026) passionate about building scalable cloud platforms,
-        automating deployments with DevOps tools, designing secure networks, and creating actionable insights
-        with Power BI and Tableau.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Cloud & Security:</strong> AWS (EC2, S3, IAM, RDS, Lambda, VPC, Route53, EKS), Azure basics, Kubernetes security</li>
-        <li><strong>DevOps:</strong> Terraform, Jenkins, GitHub Actions, Docker, Python/Bash</li>
-        <li><strong>Networking:</strong> CCNA-level routing & switching, TCP/IP, VPN, SSL/TLS</li>
-        <li><strong>Data:</strong> Power BI, Tableau, SQL, ETL</li>
-      </ul>
-    </section>
-
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <div class="certs">
-        <!-- AWS Cloud Practitioner -->
-        <div class="cert-card">
-          <h3>AWS Cloud Practitioner</h3>
-          <p>Completed ✅</p>
-          <a href="https://www.credly.com/badges/11af2e3d-872c-44e0-bd5f-7b736411a468/public_url" target="_blank">
-            <img src="https://images.credly.com/badges/11af2e3d-872c-44e0-bd5f-7b736411a468/public_url.png" alt="AWS Cloud Practitioner Badge">
-          </a>
-        </div>
-
-        <!-- AWS Solutions Architect – Associate -->
-        <div class="cert-card">
-          <h3>AWS Solutions Architect – Associate</h3>
-          <p>Completed ✅</p>
-          <a href="https://www.credly.com/badges/ee7a8d12-94f1-409d-b330-65db8b6febec/public_url" target="_blank">
-            <img src="https://images.credly.com/badges/ee7a8d12-94f1-409d-b330-65db8b6febec/public_url.png" alt="AWS Solutions Architect Badge">
-          </a>
-        </div>
-
-        <!-- AWS Virtual Solution Architect Experience -->
-        <div class="cert-card">
-          <h3>AWS Virtual Solution Architect Experience</h3>
-          <p>Completed ✅</p>
-          <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/AWS/kkE9HyeNcw6rwCRGw_AWS%20APAC_D86PuCudoTn69mc3Q_1687784551752_completion_certificate.pdf" target="_blank">
-            <img src="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/AWS/kkE9HyeNcw6rwCRGw_AWS%20APAC_D86PuCudoTn69mc3Q_1687784551752_completion_certificate.pdf" alt="AWS Virtual Solution Architect Certificate">
-          </a>
-        </div>
-
-        <!-- AWS Generative AI -->
-        <div class="cert-card">
-          <h3>AWS Generative AI</h3>
-          <p>Completed ✅</p>
-          <a href="https://www.credly.com/badges/fb7a90a2-d4a7-455d-9ce3-ad3959daa769/linked_in_profile" target="_blank">
-            <img src="https://images.credly.com/badges/fb7a90a2-d4a7-455d-9ce3-ad3959daa769/public_url.png" alt="AWS Generative AI Badge">
-          </a>
-        </div>
-
-        <!-- CCNA -->
-        <div class="cert-card">
-          <h3>CCNA</h3>
-          <p>In Progress 📚</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <h3>Cloud Projects</h3>
-      <ul>
-        <li><a href="https://github.com/Harshini7gogulamudi/aws-projects">Getting Started with AWS KMS & Other AWS Labs</a></li>
-        <!-- add more projects here -->
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        📧 harshini7gogulamudi@gmail.com <br>
-        💼 <a href="https://www.linkedin.com/in/harshini7gogulamudi">LinkedIn</a>
       </p>
     </section>
   </div>
