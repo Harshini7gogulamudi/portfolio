@@ -6,9 +6,9 @@
   <title>Harshini Gogulamudi | Portfolio</title>
   <style>
     :root {
-      --primary: #2c3e50;      /* deep blue/gray */
-      --secondary: #3498db;    /* accent blue */
-      --bg: #f7f9fc;           /* light background */
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --bg: #f7f9fc;
       --text: #333;
     }
 
@@ -71,6 +71,10 @@
       padding-bottom: 5px;
     }
 
+    ul li {
+      margin-bottom: 8px;
+    }
+
     footer {
       background: var(--primary);
       color: #fff;
@@ -81,6 +85,35 @@
 
     footer a {
       color: #ecf0f1;
+    }
+
+    .certs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .cert-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-left: 5px solid var(--secondary);
+      padding: 15px;
+      flex: 1 1 250px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      border-radius: 5px;
+    }
+
+    .cert-card h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .cert-card p {
+      margin: 5px 0 0 0;
+      font-size: 0.95rem;
+      color: #555;
     }
   </style>
 </head>
@@ -93,6 +126,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -108,14 +142,31 @@
     </section>
 
     <section id="skills">
-      <h2>Skills & Certifications</h2>
+      <h2>Skills</h2>
       <ul>
         <li><strong>Cloud & Security:</strong> AWS (EC2, S3, IAM, RDS, Lambda, VPC, Route53, EKS), Azure basics, Kubernetes security</li>
         <li><strong>DevOps:</strong> Terraform, Jenkins, GitHub Actions, Docker, Python/Bash</li>
         <li><strong>Networking:</strong> CCNA-level routing & switching, TCP/IP, VPN, SSL/TLS</li>
         <li><strong>Data:</strong> Power BI, Tableau, SQL, ETL</li>
-        <li><strong>Certifications:</strong> AWS CP, SAA, CCNA (in progress), Terraform (planned), Kubernetes (planned), Power BI (planned)</li>
       </ul>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="certs">
+        <div class="cert-card">
+          <h3>AWS Cloud Practitioner</h3>
+          <p>Completed ✅</p>
+        </div>
+        <div class="cert-card">
+          <h3>AWS Solutions Architect – Associate</h3>
+          <p>Completed ✅</p>
+        </div>
+        <div class="cert-card">
+          <h3>CCNA</h3>
+          <p>In Progress 📚</p>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
@@ -132,7 +183,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>
-        📧 harshini7gogulamudi@example.com <br>
+        📧 harshini7gogulamudi@gmail.com <br>
         💼 <a href="https://www.linkedin.com/in/harshini7gogulamudi">LinkedIn</a>
       </p>
     </section>
