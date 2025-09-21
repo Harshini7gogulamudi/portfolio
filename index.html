@@ -5,7 +5,320 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Harshini Gogulamudi | Portfolio</title>
   <style>
+    :root {<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harshini Gogulamudi | Portfolio</title>
+  <style>
     :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --bg: #f7f9fc;
+      --text: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: #ecf0f1;
+    }
+
+    nav {
+      background: var(--secondary);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--secondary);
+      padding-bottom: 5px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ecf0f1;
+    }
+
+    /* Certifications */
+    .certs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+
+    .cert-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 8px;
+      width: 120px;
+      text-align: center;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .cert-card img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    .cert-card p {
+      margin: 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    /* Projects */
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .project-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-left: 5px solid var(--secondary);
+      padding: 15px;
+      flex: 1 1 250px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      border-radius: 5px;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .project-card p {
+      margin: 5px 0 10px 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .project-card ul {
+      padding-left: 20px;
+    }
+
+    .project-card ul li {
+      margin-bottom: 5px;
+    }
+
+    .project-card ul li a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .project-card ul li a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Harshini Gogulamudi</h1>
+    <p>Cloud · DevOps · Networking · Data Analytics</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a Master’s student in IT (May 2026) passionate about building scalable cloud platforms,
+        automating deployments with DevOps tools, designing secure networks, and creating actionable insights
+        with Power BI and Tableau.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Cloud & Security:</strong> AWS (EC2, S3, IAM, RDS, Lambda, VPC, Route53, EKS), Azure basics, Kubernetes security</li>
+        <li><strong>DevOps:</strong> Terraform, Jenkins, GitHub Actions, Docker, Python/Bash</li>
+        <li><strong>Networking:</strong> CCNA-level routing & switching, TCP/IP, VPN, SSL/TLS</li>
+        <li><strong>Data:</strong> Power BI, Tableau, SQL, ETL</li>
+      </ul>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="certs">
+        <div class="cert-card">
+          <a href="https://www.credly.com/badges/11af2e3d-872c-44e0-bd5f-7b736411a468/public_url" target="_blank">
+            <img src="https://images.credly.com/badges/11af2e3d-872c-44e0-bd5f-7b736411a468/public_url.png" alt="AWS Cloud Practitioner" />
+          </a>
+          <p>AWS Cloud Practitioner</p>
+        </div>
+
+        <div class="cert-card">
+          <a href="https://www.credly.com/badges/ee7a8d12-94f1-409d-b330-65db8b6febec/public_url" target="_blank">
+            <img src="https://images.credly.com/badges/ee7a8d12-94f1-409d-b330-65db8b6febec/public_url.png" alt="AWS Solutions Architect" />
+          </a>
+          <p>AWS Solutions Architect – Associate</p>
+        </div>
+
+        <div class="cert-card">
+          <a href="https://www.credly.com/badges/fb7a90a2-d4a7-455d-9ce3-ad3959daa769/linked_in_profile" target="_blank">
+            <img src="https://images.credly.com/badges/fb7a90a2-d4a7-455d-9ce3-ad3959daa769/public_url.png" alt="AWS Generative AI" />
+          </a>
+          <p>AWS Generative AI</p>
+        </div>
+
+        <div class="cert-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/CCNA_logo.png" alt="CCNA" />
+          <p>CCNA (In Progress)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <!-- Cloud Projects -->
+        <div class="project-card">
+          <h3>Cloud Projects</h3>
+          <p>Hands-on AWS labs and mini-projects demonstrating cloud infrastructure, security, and automation.</p>
+          <ul>
+            <li><a href="https://github.com/Harshini7gogulamudi/aws-projects" target="_blank">AWS KMS & Labs</a></li>
+          </ul>
+        </div>
+
+        <!-- Networking Projects -->
+        <div class="project-card">
+          <h3>Networking Projects</h3>
+          <p>CCNA-level lab configurations, subnetting, VLANs, NAT, ACLs, and troubleshooting notes.</p>
+          <ul>
+            <li><a href="https://github.com/Harshini7gogulamudi/network-labs" target="_blank">Network Labs & Diagrams</a></li>
+          </ul>
+        </div>
+
+        <!-- Terraform / IaC Projects -->
+        <div class="project-card">
+          <h3>Terraform / IaC</h3>
+          <p>Infrastructure as Code modules and best practices for AWS resources, including VPC, EC2, S3, and IAM.</p>
+          <ul>
+            <li><a href="https://github.com/Harshini7gogulamudi/terraform-aws-starter" target="_blank">Terraform AWS Starter</a></li>
+            <li><a href="https://github.com/Harshini7gogulamudi/terraform-projects" target="_blank">Advanced Terraform Projects</a></li>
+          </ul>
+        </div>
+
+        <!-- Kubernetes / DevOps Projects -->
+        <div class="project-card">
+          <h3>Kubernetes / DevOps</h3>
+          <p>Container orchestration labs, RBAC, network policies, CI/CD pipelines with GitHub Actions and Jenkins.</p>
+          <ul>
+            <li><a href="https://github.com/Harshini7gogulamudi/k8s-labs" target="_blank">Kubernetes Labs</a></li>
+            <li><a href="https://github.com/Harshini7gogulamudi/ci-cd-k8s" target="_blank">CI/CD on Kubernetes</a></li>
+          </ul>
+        </div>
+
+        <!-- Data Analytics Projects -->
+        <div class="project-card">
+          <h3>Data Analytics</h3>
+          <p>Power BI dashboards, Tableau visualizations, SQL ETL scripts, and business insights projects.</p>
+          <ul>
+            <li><a href="https://github.com/Harshini7gogulamudi/walmart-retail-analytics" target="_blank">Walmart Retail Analytics</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        📧 harshini7gogulamudi@gmail.com <br>
+        💼 <a href="https://www.linkedin.com/in/harshini7gogulamudi" target="_blank">LinkedIn</a>
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Harshini Gogulamudi • Built with 💻 & ☕
+  </footer>
+</body>
+</html>
+
       --primary: #2c3e50;
       --secondary: #3498db;
       --bg: #f7f9fc;
