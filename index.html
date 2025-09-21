@@ -2,42 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Harshini Gogulamudi | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harshini Gogulamudi | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-    h1 { color: #2c3e50; }
-    h2 { color: #34495e; }
-    section { margin-bottom: 30px; }
-    .tagline { font-size: 1.2rem; color: #555; }
+    :root {
+      --primary: #2c3e50;      /* deep blue/gray */
+      --secondary: #3498db;    /* accent blue */
+      --bg: #f7f9fc;           /* light background */
+      --text: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: #ecf0f1;
+    }
+
+    nav {
+      background: var(--secondary);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--secondary);
+      padding-bottom: 5px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ecf0f1;
+    }
   </style>
 </head>
 <body>
-  <h1>Harshini Gogulamudi</h1>
-  <p class="tagline">Cloud · DevOps · Networking · Data Analytics</p>
+  <header>
+    <h1>Harshini Gogulamudi</h1>
+    <p>Cloud · DevOps · Networking · Data Analytics</p>
+  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Master’s student in IT passionate about scalable cloud, DevOps automation, secure networks, and insightful dashboards.</p>
-  </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section>
-    <h2>Skills & Certifications</h2>
-    <ul>
-      <li>AWS (EC2, S3, IAM, RDS, Lambda, …)</li>
-      <li>Terraform, Kubernetes, Jenkins, GitHub Actions</li>
-      <li>Networking (CCNA)</li>
-      <li>Power BI, Tableau, SQL/ETL</li>
-    </ul>
-  </section>
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a Master’s student in IT (May 2026) passionate about building scalable cloud platforms,
+        automating deployments with DevOps tools, designing secure networks, and creating actionable insights
+        with Power BI and Tableau.
+      </p>
+    </section>
 
-  <section>
-    <h2>Projects (Coming Soon)</h2>
-    <p>I’m currently working on CCNA lab notes, Terraform modules, Kubernetes security demos, and Power BI dashboards.</p>
-  </section>
+    <section id="skills">
+      <h2>Skills & Certifications</h2>
+      <ul>
+        <li><strong>Cloud & Security:</strong> AWS (EC2, S3, IAM, RDS, Lambda, VPC, Route53, EKS), Azure basics, Kubernetes security</li>
+        <li><strong>DevOps:</strong> Terraform, Jenkins, GitHub Actions, Docker, Python/Bash</li>
+        <li><strong>Networking:</strong> CCNA-level routing & switching, TCP/IP, VPN, SSL/TLS</li>
+        <li><strong>Data:</strong> Power BI, Tableau, SQL, ETL</li>
+        <li><strong>Certifications:</strong> AWS CP, SAA, CCNA (in progress), Terraform (planned), Kubernetes (planned), Power BI (planned)</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>
+        Coming soon:
+        <br>• CCNA Lab Configs & Diagrams
+        <br>• Terraform AWS Modules
+        <br>• Kubernetes Security Demos
+        <br>• Power BI Dashboards
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        📧 harshini7gogulamudi@example.com <br>
+        💼 <a href="https://www.linkedin.com/in/harshini7gogulamudi">LinkedIn</a>
+      </p>
+    </section>
+  </div>
 
   <footer>
-    <p>© 2025 Harshini Gogulamudi · <a href="https://www.linkedin.com/in/harshini7gogulamudi">LinkedIn</a></p>
+    © 2025 Harshini Gogulamudi • Built with 💻 & ☕
   </footer>
 </body>
 </html>
